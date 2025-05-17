@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой Сайт</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Добро пожаловать!</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="page2.html">О нас</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>О проекте</h2>
+      <p>Это базовый шаблон сайта на HTML и CSS.</p>
+      <div class="square"></div>
+
+      <input type="text" id="searchInput" placeholder="Поиск...">
+      <ul id="itemList">
+        <li>Яблоко</li>
+        <li>Банан</li>
+        <li>Апельсин</li>
+        <li>Арбуз</li>
+      </ul>
+      <div class="cont">
+
+      </div>
+      <div class="conts">
+
+      </div>
+
+      <img class="algo" src="https://storage.yandexcloud.net/algoknowledgebase/uploads/images/gallery/2024-08/screenshot-973.png">
+      <img class="algo" src="https://storage.yandexcloud.net/algoknowledgebase/uploads/images/gallery/2024-08/screenshot-973.png">
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Мой Сайт</p>
+  </footer>
+
+  <script>
+    let input = document.getElementById('searchInput');
+    let items = document.querySelectorAll('#itemList li');
+  
+    input.addEventListener('input', () => {
+      let filter = input.value.toLowerCase();
+      items.forEach(item => {
+        let text = item.textContent.toLowerCase();
+        item.style.display = text.includes(filter) ? '' : 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>
